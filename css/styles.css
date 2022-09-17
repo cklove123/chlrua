@@ -1,27 +1,66 @@
-.status-bar {
-    display : flex ;
-    justify-content : center ;
+@import "reset.css";
+@import  "status-bar.css";
+@import "variable.css";
+body{
+    font-family: 'Blaka Ink', cursive;
+font-family: 'Libre Barcode 128', cursive;
+font-family: 'Reem Kufi Ink', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Satisfy', cursive;
 }
 
-.status-bar__column {
-    width : 33% ;
+.welcome-header {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items : center
+    
+}
+.welcome-header__title{
+    margin: 50px;
+    font-size: 30px;
+}
+.welcome-header__text {
+    width: 30%;
+    opacity: 0.6;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
 }
 
-.status-bar__column:first-child span{
-    margin-right : 5px;
+#login-form input {
+    border: none;
+    padding: 15px 0px;
+    font-size: 15px;
+    margin-bottom: 25px
 }
 
-.status-bar__column:nth-child(2) {
-    display : flex;
-    justify-content : center;
+#login-form input:focus {
+    border-color: var(--yellow);
+}
+#login-form input::placeholder {
+color: rgba(0, 0, 0, 0.6);
 }
 
-.status-bar__column:last-child {
-    display : flex;
-    justify-content : flex-end;
-    align-items : center;
+#login-form input[type="submit"]{
+    background-color: var(--yellow);
+    cursor : pointer ;
+    border-radius: 5px;
 }
 
-.status-bar__column:last-child .fa-battery-quarter{
-    margin : 0px 10px;
+#login-form input:not([type="submit"]){
+border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#login-form a {
+    text-align : center;
+    text-decoration: none;
+    color : inherit;
+    font-size: 20px;
+    opacity: 0.9;
 }
